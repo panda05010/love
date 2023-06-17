@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  video{
+    width: 100%;
+}
+.capa{
+    position: fixed;
+    width: 100rem;
+    height: 100vh;
+    /*background: rgba(0,0,0,0.6); -- SE PONE MAS OSCURO*/
+    z-index: -1;
+    top: 0;left: -90px;
+}
+  
+  .gallery{
+    display: grid;
+    border-radius: 100%;
+  }
+
+  
+  
+  .gallery img{
+    margin-top: 90px;
+    position: absolute;
+    margin-left: -500px;
+    padding: 20px;
+    filter: drop-shadow
+       (1px 1px 2px rgb(203,201,201));
+    grid-area: 1/1;
+    width: 400px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 0;
+    transition: transform .2s, 
+      clip-path .3s, z-index .3s;
+        
+  }
+  
+  .gallery img:hover{
+    z-index: 1;
+    transition: transform .2s,
+         clip-path .3s, z-index 0s;
+  }
+  
+  .gallery > img:nth-child(1){
+    clip-path: polygon(50% 48%,
+     98% 0, 98% 0, 98% 0, 2% 0,
+      2% 0, 2% 0);
+  }
+  
+  .gallery > img:nth-child(2){
+    clip-path: polygon(52% 50%,
+     100% 98%,100% 98%, 100% 98%,
+      100% 2%,100% 2%, 100% 2%);
+  }
+  .gallery > img:nth-child(3){
+    clip-path: polygon(50% 52%,
+     98% 100%,98% 100%, 98% 100%,
+      2% 100%, 2% 100%,2% 100%);
+  }
+  
+  .gallery > img:nth-child(4){
+    clip-path: polygon(48% 50%,
+     0 98%, 0 98%, 0 98%, 0 2%, 
+     0 2%, 0 2%);
+  }
+  
+  .gallery > img:nth-child(1):hover{
+    clip-path: polygon(50% 52%, 
+    50% 100%, 100% 100%, 100% 0,
+     0 0, 0 100%, 50% 100%);
+  }
+  
+  .gallery > img:nth-child(2):hover{
+    clip-path: polygon(52% 50%,
+     0 50%, 0 100%, 100% 100%, 
+     100% 0, 0 0, 0 50%);
+  }
+  
+  .gallery > img:nth-child(3):hover{
+    clip-path: polygon(50% 52%, 
+    50% 0, 100% 0, 100% 100%, 
+    0 100%, 0 0, 50% 0);
+  }
+  
+  .gallery > img:nth-child(4):hover{
+    clip-path: polygon(48% 50%,
+     100% 50%,100% 100%, 0 100%,
+      0 0, 100% 0, 100% 50%);
+  }
+  
+  
+#imgco{
+  position: absolute;
+  margin-left: -550px;
+  width: 200px;
+  height: 200px;
+  margin-top: 150px;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
